@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://cdn.static.runoob.com/libs/jquery/1.10.2/jquery.min.js"></script>
+</head>
+<body>
+<img class="my-image" style="width: 100px; height: 100px;">
+<script>
+    // fetch('http://127.0.0.1:3000/login',{
+    //     body: JSON.stringify({'name':'asd'}),
+    //     method:'POST',
+    //     headers:{
+    //         'content-type':'application/json'
+    //     }
+    // }).then()
+
+
+    // $.ajax({
+    //     url:'http://127.0.0.1:3000/login',
+    //     data:{'name':'asd'},
+    //     type:'post'
+    // })
+
+    var myImage = document.querySelector('.my-image');
+    let req = new Request('http://127.0.0.1:3000/images/flower.jpg',{method:'get'});
+    fetch(req).then(function(response) {
+        return response.blob();
+    }).then(function(response) {
+        var objectURL = URL.createObjectURL(response);
+        myImage.src = objectURL;//异步操作
+        //垃圾回收
+        //不能直接写释放操作，src操作是异步，不会直接加载进图片，得先让页面渲染完成之后调用释放，否则渲染时会出错
+        //URL.revokeObjectURL(objectURL) //出错，无法加载
+        window.onload=function(){
+            URL.revokeObjectURL(objectURL);
+            console.log(objectURL)
+        }
+
+    });
+
+    var request = {
+        //body: JSON.stringify({username: "rfadmin", password: "xzd123456"}),
+        method: 'GET',
+        mode:'cors',
+        headers: {
+            'content-type': 'application/json'
+        }
+    };
+
+    // fetch('http://127.0.0.1:3000/jsonp/fetch',request)
+    //     .then(res => console.log(res))
+    //     .then(json => console.log(json))
+    //     .catch(error => console.log(error))
+
+
+    // const dispatch = (arg) => {
+    //     return arg + 2
+    //
+    // };
+    // const action = arg => dispatch => {
+    //     console.log(arg)
+    //     console.log(dispatch(3))
+    //
+    // };
+    //
+    // let bbb = (arg, dispatch) => {
+    //     //console.log(typeof dispatch)
+    //     let fun = (arg) => dispatch(action(arg));
+    //     fun(arg)
+    // };
+    //
+    // bbb(1, dispatch)
+
+
+    setTimeout(function(){document.write('延时打印')},1000)
+</script>
+</body>
+</html>

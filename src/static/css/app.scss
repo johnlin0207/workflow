@@ -1,0 +1,89 @@
+.app {
+  color: white;
+  .header {
+    height: 78px;
+    background: #1e3555;
+    display: flex;
+    padding: 0 32px;
+    //justify-content: start;
+    align-items: center;
+    .log {
+      margin: 12px 32px 12px 0;
+      width: 220px;
+      height: 50px;
+      cursor: pointer;
+      font-family: Algerian;
+      font-size: 30px;
+      text-align: center;
+      line-height: 50px;
+    }
+    .option {
+      width: 128px;
+      height: 40px;
+      margin-right: 15px;
+      //background-color: red;
+      cursor: pointer;
+      border-radius: 20px;
+      text-align: center;
+      line-height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-left: 30px;
+      .icon{
+        width: 30px;
+        height: 30px;
+        margin-right: 5px;
+      }
+    }
+    .f1{
+      background: url("../images/dash.svg") no-repeat 28px 4px;
+    }
+    .f2{
+      background: url("../images/data.svg") no-repeat 28px 4px;
+    }
+    .f3{
+      background: url("../images/arg.svg") no-repeat 34px 6px;
+    }
+    .option:hover{
+
+      background-color: #1f3e65;
+
+    }
+    .set {
+      width: 200px;
+      height: 40px;
+      //background: gray;
+      position: absolute;
+      right: 0;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      font-size: .75em;
+      .user {
+        flex: 1;
+      }
+      .logout {
+        flex: 1;
+
+        .button {
+          width: 24px;
+          height: 12px;
+          padding: 8px 16px;
+          border: 1px solid #33adff;
+          border-radius: 3px;
+          cursor: pointer;
+          background: transparent;
+        }
+        .button:hover{
+          background-color: #33adff;
+          transition: background-color .3s;
+        }
+      }
+    }
+  }
+  .app_body{
+    height: 100vh;
+    background: #000;
+  }
+}

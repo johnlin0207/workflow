@@ -1,0 +1,291 @@
+.container {
+  height: 100vh;
+  color: white;
+  position: relative;
+
+  .page2_top {
+    width: 100%;
+    height: 50px;
+    background: #152740;
+    text-align: center;
+    display: flex;
+    justify-content: left;
+
+    .block {
+      flex: 1;
+      padding-right: 20px;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      .sets {
+        height: 14px;
+        cursor: pointer;
+        margin-right: .75rem;
+        padding: 10px 15px;
+        font-size: .75rem;
+        border-radius: 3px;
+        line-height: 14px;
+        background-color: #485872;
+        img {
+          margin-left: 10px;
+        }
+      }
+      .as:focus {
+        border: 1px solid #33adff;
+      }
+      .debug {
+        background: #00af83;
+      }
+    }
+    .settings {
+      position: absolute;
+      width: 320px;
+      right: 98px;
+      top: 50px;
+      color: white;
+      z-index: 101;
+      .set_header {
+        padding: 1rem;
+        font-size: 16px;
+        background: #1e3555;
+
+      }
+      .set_body {
+        padding: 1rem;
+        background: #193048;
+
+        .tui-form-item {
+          margin-bottom: 12px;
+          font-size: 12px;
+          height: 30px;
+
+          label {
+            width: 30px;
+            display: block;
+            padding-right: 25px;
+            line-height: 30px;
+            float: left;
+          }
+          input {
+            line-height: 1.5;
+            width: 70%;
+            font-size: 12px;
+            border-radius: 4px;
+            //border: 1px solid slateblue;
+            border: 1px solid rgb(51, 173, 255);
+            background: #193048;
+            color: white;
+            padding: 6px;
+            float: left;
+          }
+          .sub {
+            width: 50px;
+            cursor: pointer;
+          }
+          .sub:hover {
+            background-color: #33adff;
+            transition: background-color .2s;
+            -moz-transition: background-color .2s; /* Firefox 4 */
+            -webkit-transition: background-color .2s; /* Safari 和 Chrome */
+            -o-transition: background-color .2s; /* Opera */
+          }
+        }
+      }
+    }
+  }
+
+  .page2_selector {
+    width: 160px;
+    align-items: center;
+    justify-content: center;
+    font-weight: 100;
+    display: flex;
+    color: white;
+    font-size: .75em;
+
+    .sel_l {
+      width: 49%;
+      height: 30px;
+      line-height: 30px;
+      background-color: #274469;
+      border-radius: 5px 0 0 5px;
+      flex: 1;
+      cursor: pointer;
+    }
+    .sel_r {
+      width: 49%;
+      height: 30px;
+      line-height: 30px;
+      background-color: #274469;
+      border-radius: 0 5px 5px 0;
+      flex: 1;
+      cursor: pointer;
+    }
+  }
+
+  .content {
+    height: 100%;
+    overflow: hidden;
+    background: #141c27 url("../images/bg.png") repeat;
+    .design {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      color: white;
+      .left_ctl_bar {
+        z-index: 11;
+        font-size: .75rem;
+        position: absolute;
+        top: 4px;
+        .top {
+          width: 58px;
+          height: 14px;
+          border-radius: .25rem .25rem 0 0;
+          background: #2b4d7b url("../images/more_r.svg") no-repeat 95%;
+          padding: 1rem 12px;
+          text-align: center;
+          transition: background-color .2s;
+          -moz-transition: background-color .2s; /* Firefox 4 */
+          -webkit-transition: background-color .2s; /* Safari 和 Chrome */
+          -o-transition: background-color .2s; /* Opera */
+        }
+        .top:hover {
+          background-color: #33adff;
+          cursor: pointer;
+        }
+        .ctl_content {
+          width: 70px;
+          height: 420px;
+          border-radius: 0 0 4px 4px;
+          font-size: 16px;
+          padding: 6px;
+          background: #1e3555;
+          display: flex;
+          flex-direction: column;
+          .item {
+            width: 58px;
+            height: 58px;
+            padding: 6px;
+            flex: 1;
+            div {
+              width: 32px;
+              height: 32px;
+              padding: 12px;
+              border-radius: .25rem;
+              background: #193048;
+              border: 1px solid #193048;
+              transition: background-color .2s;
+              -moz-transition: background-color .2s; /* Firefox 4 */
+              -webkit-transition: background-color .2s; /* Safari 和 Chrome */
+              -o-transition: background-color .2s; /* Opera */
+            }
+            div:hover {
+              border: 1px solid #33adff;
+              cursor: move;
+              background-color: #274469;
+            }
+          }
+        }
+        .target {
+          background: #2b4d7b url("../images/more_l.svg") no-repeat 5%;
+        }
+      }
+      .top_ctl_bar {
+        width: 578px;
+        height: 58px;
+        position: absolute;
+        left: 86px;
+        top: 4px;
+        border-radius: .25rem;
+        display: flex;
+        align-items: center;
+        background: #1e3555;
+        z-index: 11;
+
+        .top_desc {
+          padding: 0 1rem;
+          font-size: .75rem;
+        }
+        .mid_content {
+          display: flex;
+          align-items: center;
+          z-index: 3;
+          .item {
+            width: 58px;
+            height: 58px;
+            div {
+              width: 32px;
+              height: 32px;
+              padding: 12px;
+              border-radius: .25rem;
+              background: #193048;
+              border: 1px solid #193048;
+              transition: background-color .2s;
+              -moz-transition: background-color .2s; /* Firefox 4 */
+              -webkit-transition: background-color .2s; /* Safari 和 Chrome */
+              -o-transition: background-color .2s; /* Opera */
+            }
+            div:hover {
+              border: 1px solid #33adff;
+              cursor: move;
+              background-color: #274469;
+            }
+          }
+        }
+      }
+      .right_ctl_bar {
+        right: 0;
+        z-index: 11
+      }
+      .panel {
+        width: inherit;
+        position: absolute;
+        height: 100%;
+        overflow: hidden;
+      }
+    }
+    .debug {
+      height: 100%;
+      position: relative;
+
+      .panel {
+        height: inherit;
+        width: inherit;
+        position: absolute;
+        overflow: hidden;
+      }
+
+      .zoom {
+        left: 4px;
+        top: 4px;
+      }
+    }
+  }
+}
+
+.zoom {
+  width: 108px;
+  height: 30px;
+  background: #132339;
+  border-radius: 3px;
+  position: absolute;
+  top: 66px;
+  left: 86px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  z-index: 11;
+  .zoom-out {
+    width: 30px;
+    height: 18px;
+    flex: 1;
+    cursor: pointer;
+  }
+  .zoom-in {
+    width: 30px;
+    height: 18px;
+    flex: 1;
+    cursor: pointer;
+  }
+}
+

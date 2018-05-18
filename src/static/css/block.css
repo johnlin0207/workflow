@@ -1,0 +1,39 @@
+.drawPanel{
+    position: relative;
+    height: 100%;
+}
+.bk {
+    width: 100px;
+    height: 120px;
+    background: dodgerblue;
+    position: absolute;
+    z-index:1;
+}
+
+.item-icon{
+    width: 32px;
+    height: 32px;
+}
+
+.icon-container{
+
+    text-align: center;
+}
+.item-close{
+    float: right;
+}
+
+.item-name{
+    text-align: center;
+}
+
+.item-bottom{
+    padding: 5px 2px 5px 2px;
+}
+
+.item-div{
+    float: left;
+    width: 50%;
+    text-align: center;
+}
+
